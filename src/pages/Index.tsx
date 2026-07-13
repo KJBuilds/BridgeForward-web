@@ -1,10 +1,6 @@
 import Hero from "@/components/Hero";
-import ImpactRibbon from "@/components/ImpactRibbon";
 import ServicesSnapshot from "@/components/ServicesSnapshot";
 import ThreePillars from "@/components/ThreePillars";
-import EcosystemDiagram from "@/components/EcosystemDiagram";
-import TrustBar from "@/components/TrustBar";
-import FounderSpotlight from "@/components/FounderSpotlight";
 import WhyBridgeForward from "@/components/WhyBridgeForward";
 import CTABanner from "@/components/CTABanner";
 import Newsletter from "@/components/Newsletter";
@@ -22,14 +18,15 @@ export default function Index() {
   return (
     <>
       <Hero />
-      <ImpactRibbon />
-      <TrustBar />
       <ServicesSnapshot />
       <ThreePillars />
-      <EcosystemDiagram />
-      <FounderSpotlight />
       <WhyBridgeForward />
-      <CTABanner />
+      <CTABanner
+        title="Protect your business. Power something bigger."
+        body="Partner with Bridge Forward for cybersecurity services that strengthen resilience while helping fund workforce and legacy initiatives that move communities forward."
+        primaryLabel="Request a Consultation"
+        primaryHref="/contact"
+      />
       <Newsletter />
     </>
   );
