@@ -153,7 +153,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
 
           <div className="pt-8 text-center text-xs text-silver/60 tracking-wide">
-            © {new Date().getFullYear()} Bridge Forward Collective. All rights reserved.
+            © {new Date().getFullYear()} Bridge Forward. All rights reserved.
           </div>
         </div>
       </footer>
