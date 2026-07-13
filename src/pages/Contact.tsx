@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Mail, Phone, Linkedin, Send } from "lucide-react";
+import { Mail, Phone, Globe, Send } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 
 const inquiryTypes = [
@@ -59,11 +59,11 @@ export default function Contact() {
                 <p className="text-white font-medium">918-630-3998</p>
               </div>
             </a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" className="glass-card rounded-2xl p-6 flex items-center gap-4 hover:border-bf-blue/50">
-              <Linkedin className="w-5 h-5 text-bf-blue" />
+            <a href="https://www.BridgeForward.tech" target="_blank" rel="noreferrer" className="glass-card rounded-2xl p-6 flex items-center gap-4 hover:border-bf-blue/50">
+              <Globe className="w-5 h-5 text-bf-blue" />
               <div>
-                <p className="text-xs uppercase tracking-wider text-silver">LinkedIn</p>
-                <p className="text-white font-medium">Connect with the founder</p>
+                <p className="text-xs uppercase tracking-wider text-silver">Website</p>
+                <p className="text-white font-medium">www.BridgeForward.tech</p>
               </div>
             </a>
           </div>
