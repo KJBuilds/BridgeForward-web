@@ -6,11 +6,10 @@ import { Link, useLocation } from "react-router-dom";
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "Cyber Consulting", href: "/cyber-consulting" },
-  { label: "Workforce", href: "/workforce-development" },
-  { label: "CyberPlug", href: "/cyberplug" },
-  { label: "Legacy", href: "/legacy-initiatives" },
+  { label: "Workforce Development", href: "/workforce-development" },
+  { label: "Legacy Initiatives", href: "/legacy-initiatives" },
   { label: "About", href: "/about" },
-  { label: "Investors", href: "/investors" },
+  { label: "Contact", href: "/contact" },
 ];
 
 function Brandmark({ onDark = false }: { onDark?: boolean }) {
@@ -55,7 +54,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               to="/contact"
               className="btn-brand inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold"
             >
-              Request a Consultation
+              Request Consultation
             </Link>
           </nav>
 
@@ -94,7 +93,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   className="btn-brand inline-flex w-fit items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold"
                   onClick={() => setOpen(false)}
                 >
-                  Request a Consultation
+                  Request Consultation
                 </Link>
               </nav>
             </motion.div>
@@ -117,43 +116,38 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-10 pb-10 border-b border-white/5">
-            <div className="md:col-span-1">
-              <Brandmark onDark />
-              <p className="mt-4 text-sm text-silver leading-relaxed max-w-xs">
-                A cybersecurity-led ecosystem reinvesting revenue into workforce development and community legacy.
+          <div className="grid md:grid-cols-3 gap-12 pb-10 border-b border-white/5 text-left">
+            <div>
+              <div className="mb-4">
+                <Brandmark onDark />
+              </div>
+              <p className="text-xs text-silver/60 italic mb-3">Cybersecurity. Workforce. Legacy.</p>
+              <p className="text-sm text-silver leading-relaxed max-w-sm">
+                Cybersecurity consulting that funds workforce development and legacy initiatives — building resilient businesses and empowered communities.
               </p>
             </div>
             <div>
               <h4 className="text-xs font-semibold uppercase tracking-[0.18em] text-white mb-4">Explore</h4>
-              <ul className="space-y-2.5 text-sm">
-                {navLinks.slice(1, 5).map((l) => (
-                  <li key={l.href}>
-                    <Link to={l.href} className="text-silver hover:text-bf-blue transition-colors">
-                      {l.label}
-                    </Link>
-                  </li>
-                ))}
+              <ul className="space-y-3 text-sm">
+                <li><Link to="/cyber-consulting" className="text-silver hover:text-white transition-colors">Cyber Consulting</Link></li>
+                <li><Link to="/workforce-development" className="text-silver hover:text-white transition-colors">Workforce Development</Link></li>
+                <li><Link to="/legacy-initiatives" className="text-silver hover:text-white transition-colors">Legacy Initiatives</Link></li>
+                <li><Link to="/about" className="text-silver hover:text-white transition-colors">About</Link></li>
+                <li><Link to="/contact" className="text-silver hover:text-white transition-colors">Contact</Link></li>
+                <li><Link to="/investors" className="text-silver hover:text-white transition-colors">Investors</Link></li>
               </ul>
             </div>
             <div>
-              <h4 className="text-xs font-semibold uppercase tracking-[0.18em] text-white mb-4">Company</h4>
-              <ul className="space-y-2.5 text-sm">
-                <li><Link to="/about" className="text-silver hover:text-bf-blue">About</Link></li>
-                <li><Link to="/investors" className="text-silver hover:text-bf-blue">Investors & Partners</Link></li>
-                <li><Link to="/institute" className="text-silver hover:text-bf-blue">Community Cybersecurity Institute</Link></li>
-                <li><Link to="/contact" className="text-silver hover:text-bf-blue">Contact</Link></li>
+              <h4 className="text-xs font-semibold uppercase tracking-[0.18em] text-white mb-4">Contact</h4>
+              <ul className="space-y-3 text-sm text-silver">
+                <li>hello@bridgeforwardcollective.org</li>
+                <li>Tulsa, Oklahoma</li>
+                <li>
+                  <Link to="/contact" className="text-silver hover:text-white transition-colors underline">
+                    Request a Consultation
+                  </Link>
+                </li>
               </ul>
-            </div>
-            <div>
-              <h4 className="text-xs font-semibold uppercase tracking-[0.18em] text-white mb-4">Connect</h4>
-              <a href="mailto:Kisha@BridgeForward.tech" className="flex items-center gap-2 text-sm text-silver hover:text-bf-blue mb-2">
-                <Mail size={16} /> Kisha@BridgeForward.tech
-              </a>
-              <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm text-silver hover:text-bf-blue mb-2">
-                <Linkedin size={16} /> LinkedIn
-              </a>
-              <p className="text-sm text-silver">918-630-3998</p>
             </div>
           </div>
 
