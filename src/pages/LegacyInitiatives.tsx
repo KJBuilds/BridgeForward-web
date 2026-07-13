@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { GraduationCap, Home, Cpu, Building2, ArrowRight } from "lucide-react";
+import { GraduationCap, Home, Users, Building2, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import CTABanner from "@/components/CTABanner";
 import { useEffect } from "react";
