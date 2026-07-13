@@ -28,3 +28,9 @@ dist-ssr
 html_snapshots_backup/
 *.zip
 *.tsbuildinfo
+*.png
+.context.md
+PROJECT_STATUS.md
+visit_log.md
+_manifest.md
+.lovable/
