@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@600;700;800;900&family=Orbitron:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light executive canvas */
+    --background: 0 0% 100%;                    /* #FFFFFF */
+    --foreground: 215 28% 17%;                  /* #1E293B navy heading */
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 28% 17%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 28% 17%;
+
+    /* Primary brand purple */
+    --primary: 269 53% 37%;                     /* #5B2D90 */
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary softer purple */
+    --secondary: 258 41% 61%;                   /* #8B6FC8 */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 40% 98%;                       /* #F8FAFC */
+    --muted-foreground: 215 19% 35%;            /* #475569 body */
+
+    /* Magenta accent */
+    --accent: 330 81% 60%;                      /* #EC4899 */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 214 32% 91%;                      /* #E2E8F0 */
+    --input: 214 32% 91%;
+    --ring: 269 53% 37%;
+
+    --radius: 1rem;
+
+    /* Brand tokens */
+    --bf-black: 0 0% 3%;                        /* footer keeps deep ink */
+    --bf-charcoal: 210 40% 98%;                 /* repurposed: alt section gray */
+    --bf-blue: 269 53% 37%;                     /* repurposed: primary purple */
+    --bf-purple: 269 53% 37%;                   /* #5B2D90 */
+    --bf-secondary-purple: 258 41% 61%;         /* #8B6FC8 */
+    --bf-magenta: 330 81% 60%;                  /* #EC4899 */
+    --bf-orange: 25 95% 53%;                    /* #F97316 warm */
+    --bf-gold: 45 70% 47%;                      /* #C9A227 Legacy */
+    --bf-silver: 215 19% 35%;                   /* repurposed: body slate */
+    --bf-heading: 215 28% 17%;                  /* #1E293B */
+
+    /* Gradients (purple → magenta → warm orange) */
+    --gradient-brand: linear-gradient(90deg, hsl(269 53% 37%), hsl(330 81% 60%), hsl(25 95% 53%));
+    --gradient-hero: linear-gradient(135deg, hsl(269 53% 37%), hsl(330 81% 60%));
+    --gradient-subtle: linear-gradient(180deg, #FFFFFF, hsl(210 40% 98%));
+    --gradient-cta: linear-gradient(135deg, hsl(269 53% 37%), hsl(330 81% 60%), hsl(25 95% 53%));
+    --gradient-glow: radial-gradient(ellipse at 50% 0%, hsl(269 53% 37% / 0.10), transparent 70%);
+
+    --shadow-card: 0 2px 10px -2px hsl(215 28% 17% / 0.06), 0 8px 24px -8px hsl(269 53% 37% / 0.10);
+    --shadow-card-hover: 0 10px 30px -10px hsl(269 53% 37% / 0.25);
+    --shadow-glow: 0 10px 40px -10px hsl(269 53% 37% / 0.35);
+    --shadow-cyan: 0 8px 24px -8px hsl(269 53% 37% / 0.18);
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 215 28% 17%;
+    --sidebar-primary: 269 53% 37%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 40% 98%;
+    --sidebar-accent-foreground: 215 28% 17%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 269 53% 37%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background-color: #FFFFFF;
+    color: hsl(215 19% 35%);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', 'Space Grotesk', 'Inter', sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    color: hsl(var(--bf-heading));
+  }
+  .font-display { font-family: 'Orbitron', 'Montserrat', sans-serif; letter-spacing: 0.05em; }
+}
+
+@layer utilities {
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-brand);
+  }
+  .gradient-hero-bg { background-image: var(--gradient-hero); }
+  .gradient-brand-bg { background-image: var(--gradient-brand); }
+  .gradient-subtle-bg { background-image: var(--gradient-subtle); }
+  .gradient-cta-bg { background-image: var(--gradient-cta); }
+  .shadow-card { box-shadow: var(--shadow-card); }
+  .shadow-card-hover { box-shadow: var(--shadow-card-hover); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+  .shadow-cyan { box-shadow: var(--shadow-cyan); }
+  .glow-bg { background-image: var(--gradient-glow); }
+
+  .hex-grid {
+    background-color: transparent;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='56' height='100' viewBox='0 0 56 100'><path d='M28 0L56 16.18v32.36L28 64.72L0 48.54V16.18z' fill='none' stroke='%235B2D90' stroke-opacity='0.05' stroke-width='1'/></svg>");
+    background-size: 56px 100px;
+  }
+
+  .circuit-bg, .cyber-grid {
+    background-image:
+      linear-gradient(hsl(269 53% 37% / 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(269 53% 37% / 0.04) 1px, transparent 1px);
+    background-size: 70px 70px;
+  }
+
+  /* Premium executive card */
+  .glass-card {
+    background: #FFFFFF;
+    border: 1px solid hsl(214 32% 91%);
+    box-shadow: var(--shadow-card);
+    transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+  }
+  .glass-card:hover {
+    transform: translateY(-3px);
+    border-color: hsl(269 53% 37% / 0.35);
+    box-shadow: var(--shadow-card-hover);
+  }
+
+  /* Primary gradient button — purple → magenta */
+  .btn-brand {
+    position: relative;
+    background-image: linear-gradient(90deg, hsl(269 53% 37%), hsl(330 81% 60%));
+    background-size: 200% 100%;
+    color: #FFFFFF !important;
+    box-shadow: 0 6px 20px -6px hsl(269 53% 37% / 0.45);
+    transition: background-position .5s ease, box-shadow .3s ease, transform .2s ease;
+  }
+  .btn-brand:hover {
+    background-position: 100% 0;
+    box-shadow: 0 10px 28px -8px hsl(330 81% 60% / 0.5);
+    transform: translateY(-1px);
+  }
+
+  /* Secondary button — white / purple outline */
+  .btn-outline-silver {
+    background: #FFFFFF;
+    border: 1.5px solid hsl(269 53% 37%);
+    color: hsl(269 53% 37%) !important;
+    transition: all .25s ease;
+  }
+  .btn-outline-silver:hover {
+    background: hsl(269 53% 37% / 0.06);
+    box-shadow: 0 6px 18px -6px hsl(269 53% 37% / 0.35);
+  }
+
+  .text-silver { color: hsl(215 19% 35%); }
+
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 0.35; }
+    50% { opacity: 0.7; }
+  }
+  .animate-pulse-glow { animation: pulse-glow 4s ease-in-out infinite; }
+
+  @keyframes float-particle {
+    0%, 100% { transform: translateY(0) translateX(0); opacity: 0.5; }
+    50% { transform: translateY(-20px) translateX(10px); opacity: 1; }
+  }
+  .animate-float { animation: float-particle 6s ease-in-out infinite; }
+
+  /* ============================================================
+     LIGHT-THEME OVERRIDES for legacy dark-theme utility classes.
+     These preserve all existing component code while flipping the
+     palette. Footer keeps its dark treatment via the footer scope
+     overrides at the bottom.
+     ============================================================ */
+  .text-white { color: hsl(var(--bf-heading)); }
+  .bg-bf-black { background-color: #FFFFFF; }
+  .bg-bf-charcoal { background-color: hsl(210 40% 98%); }
+  .bg-bf-charcoal\/60 { background-color: hsl(210 40% 98% / 0.7); }
+  .border-white\/5 { border-color: hsl(214 32% 91%); }
+  .border-white\/10 { border-color: hsl(214 32% 91%); }
+  .text-silver\/70 { color: hsl(215 19% 45%); }
+  .text-silver\/80 { color: hsl(215 19% 40%); }
+  .text-silver\/60 { color: hsl(215 19% 50%); }
+  .text-bf-blue { color: hsl(269 53% 37%); }
+  .border-bf-blue\/30 { border-color: hsl(269 53% 37% / 0.3); }
+  .border-bf-blue\/40 { border-color: hsl(269 53% 37% / 0.4); }
+  .bg-bf-purple\/10 { background-color: hsl(269 53% 37% / 0.06); }
+
+  /* Footer keeps deep ink palette */
+  footer.bf-dark { background-color: hsl(var(--bf-black)) !important; color: hsl(220 11% 77%); }
+  footer.bf-dark .text-white { color: #FFFFFF !important; }
+  footer.bf-dark .text-silver,
+  footer.bf-dark .text-silver\/60,
+  footer.bf-dark .text-silver\/70,
+  footer.bf-dark .text-silver\/80 { color: hsl(220 11% 77%) !important; }
+  footer.bf-dark .bg-bf-black { background-color: hsl(var(--bf-black)) !important; }
+  footer.bf-dark h2, footer.bf-dark h3, footer.bf-dark h4 { color: #FFFFFF; }
+  footer.bf-dark .border-white\/5 { border-color: hsl(0 0% 100% / 0.08) !important; }
+  footer.bf-dark .hex-grid {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='56' height='100' viewBox='0 0 56 100'><path d='M28 0L56 16.18v32.36L28 64.72L0 48.54V16.18z' fill='none' stroke='%23A855F7' stroke-opacity='0.10' stroke-width='1'/></svg>");
+  }
+}
