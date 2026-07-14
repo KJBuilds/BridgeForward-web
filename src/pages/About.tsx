@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ShieldCheck, GraduationCap, Users, HeartHandshake, Eye, Heart } from "lucide-react";
 import CTABanner from "@/components/CTABanner";
-import { useEffect } from "react";
+import { usePageMeta } from "@/hooks/use-page-meta";
 
 const pillars = [
   {
@@ -43,9 +43,10 @@ const focus = [
 ];
 
 export default function About() {
-  useEffect(() => {
-    document.title = "About | Bridge Forward";
-  }, []);
+  usePageMeta(
+    "About | Bridge Forward",
+    "Bridge Forward is a cybersecurity-led ecosystem founded by Kisha Jefferson, combining consulting, workforce development, and legacy-driven community initiatives."
+  );
 
   return (
     <>

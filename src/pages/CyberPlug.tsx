@@ -1,6 +1,6 @@
 import { Users, BookOpen, Calendar, HeartHandshake, Briefcase, Library } from "lucide-react";
 import CTABanner from "@/components/CTABanner";
-import { useEffect } from "react";
+import { usePageMeta } from "@/hooks/use-page-meta";
 
 const features = [
   { icon: Users, title: "Professional Networking", body: "Connect with practitioners, leaders, and peers across cybersecurity." },
@@ -12,9 +12,10 @@ const features = [
 ];
 
 export default function CyberPlug() {
-  useEffect(() => {
-    document.title = "CyberPlug Community | Bridge Forward";
-  }, []);
+  usePageMeta(
+    "CyberPlug Community | Bridge Forward",
+    "CyberPlug connects aspiring and emerging cybersecurity professionals to networking, mentorship, job opportunities, and community events."
+  );
 
   return (
     <>

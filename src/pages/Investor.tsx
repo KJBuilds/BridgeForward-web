@@ -1,7 +1,7 @@
 import EcosystemDiagram from "@/components/EcosystemDiagram";
 import CTABanner from "@/components/CTABanner";
 import { TrendingUp, Building2, Users, Landmark, HandCoins, Briefcase } from "lucide-react";
-import { useEffect } from "react";
+import { usePageMeta } from "@/hooks/use-page-meta";
 
 const metrics = [
   { value: "100%", label: "Revenue Reinvested into Workforce & Legacy Programs" },
@@ -22,9 +22,10 @@ const impact = [
 ];
 
 export default function Investor() {
-  useEffect(() => {
-    document.title = "Investors & Partners | Bridge Forward";
-  }, []);
+  usePageMeta(
+    "Investors & Partners | Bridge Forward",
+    "Explore corporate, government, and grant partnership opportunities with Bridge Forward's cybersecurity-led social enterprise model."
+  );
 
   return (
     <>

@@ -1,6 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Mail, Phone, Globe, Send } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
+import { usePageMeta } from "@/hooks/use-page-meta";
 
 const inquiryTypes = [
   "Business Inquiry",
@@ -12,9 +13,10 @@ const inquiryTypes = [
 export default function Contact() {
   const [type, setType] = useState(inquiryTypes[0]);
 
-  useEffect(() => {
-    document.title = "Contact | Bridge Forward";
-  }, []);
+  usePageMeta(
+    "Contact | Bridge Forward",
+    "Contact Bridge Forward to discuss cybersecurity consulting, workforce development partnerships, scholarship support, or speaking engagements."
+  );
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();

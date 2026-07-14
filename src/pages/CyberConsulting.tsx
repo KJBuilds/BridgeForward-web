@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ShieldCheck, Search, FileCheck, Activity, AlertTriangle, UserCheck, Compass, ClipboardList } from "lucide-react";
 import CTABanner from "@/components/CTABanner";
-import { useEffect } from "react";
+import { usePageMeta } from "@/hooks/use-page-meta";
 
 const groups = [
   {
@@ -35,9 +35,10 @@ const groups = [
 ];
 
 export default function CyberConsulting() {
-  useEffect(() => {
-    document.title = "Cyber Consulting Services | Bridge Forward";
-  }, []);
+  usePageMeta(
+    "Cyber Consulting Services | Bridge Forward",
+    "Practical cybersecurity consulting — risk assessments, penetration testing, vCISO services, governance & compliance readiness, and tabletop exercises."
+  );
 
   return (
     <>

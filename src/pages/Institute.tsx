@@ -1,6 +1,6 @@
 import { GraduationCap, ShieldCheck, FlaskConical, Rocket, Calendar, Users } from "lucide-react";
 import CTABanner from "@/components/CTABanner";
-import { useEffect } from "react";
+import { usePageMeta } from "@/hooks/use-page-meta";
 
 const pillars = [
   { icon: GraduationCap, title: "Cybersecurity Education", body: "Hands-on training programs from foundational to advanced practitioner levels." },
@@ -18,9 +18,10 @@ const phases = [
 ];
 
 export default function Institute() {
-  useEffect(() => {
-    document.title = "Community Cybersecurity Institute | Bridge Forward";
-  }, []);
+  usePageMeta(
+    "Community Cybersecurity Institute | Bridge Forward",
+    "Bridge Forward's long-term vision for a physical Community Cybersecurity Institute combining education, business resilience advisory, and workforce acceleration."
+  );
 
   return (
     <>

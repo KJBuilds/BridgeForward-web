@@ -12,6 +12,7 @@ import {
   CalendarCheck,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { usePageMeta } from "@/hooks/use-page-meta";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -44,6 +45,11 @@ const valuePoints = [
 ];
 
 export default function CyberChecklist() {
+  usePageMeta(
+    "Free Cyber Risk Checklist | Bridge Forward",
+    "Download Bridge Forward's free cyber risk checklist to uncover blind spots, evaluate incident readiness, and understand your organization's risk level."
+  );
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* HERO */}

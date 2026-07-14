@@ -1,7 +1,7 @@
 import { GraduationCap, Briefcase, Users, Mic, Compass, Award, HeartHandshake } from "lucide-react";
 import CareerJourneyTimeline from "@/components/CareerJourneyTimeline";
 import CTABanner from "@/components/CTABanner";
-import { useEffect } from "react";
+import { usePageMeta } from "@/hooks/use-page-meta";
 
 const programs = [
   {
@@ -27,9 +27,10 @@ const programs = [
 ];
 
 export default function WorkforceDevelopment() {
-  useEffect(() => {
-    document.title = "Workforce Development | Bridge Forward";
-  }, []);
+  usePageMeta(
+    "Workforce Development | Bridge Forward",
+    "Bridge Forward Workforce Development connects aspiring professionals to cybersecurity careers through the CyberPlug community, mentorship, training, and internships."
+  );
 
   return (
     <>

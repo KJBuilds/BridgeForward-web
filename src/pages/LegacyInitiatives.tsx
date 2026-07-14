@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { GraduationCap, Home, Users, Building2, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import CTABanner from "@/components/CTABanner";
-import { useEffect } from "react";
+import { usePageMeta } from "@/hooks/use-page-meta";
 
 const sections = [
   {
@@ -29,9 +29,10 @@ const sections = [
 ];
 
 export default function LegacyInitiatives() {
-  useEffect(() => {
-    document.title = "Legacy Initiatives | Bridge Forward";
-  }, []);
+  usePageMeta(
+    "Legacy Initiatives | Bridge Forward",
+    "Legacy-centered initiatives — scholarships, the Legacy Home, and community support — funded by Bridge Forward's cybersecurity consulting revenue."
+  );
 
   return (
     <>
