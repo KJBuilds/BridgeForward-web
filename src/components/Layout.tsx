@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Shield, Linkedin, Mail } from "lucide-react";
+import { Menu, X, Linkedin, Mail } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import logoMark from "@/assets/logo-mark.png";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -15,9 +16,7 @@ const navLinks = [
 function Brandmark({ onDark = false }: { onDark?: boolean }) {
   return (
     <span className="inline-flex items-center gap-2.5">
-      <span className="relative inline-flex items-center justify-center w-9 h-9 rounded-lg gradient-brand-bg shadow-glow">
-        <Shield className="w-4 h-4" color="#FFFFFF" strokeWidth={2.5} />
-      </span>
+      <img src={logoMark} alt="" aria-hidden="true" className="h-9 w-auto object-contain" />
       <span className="font-heading text-lg font-extrabold tracking-tight leading-none">
         <span style={{ color: onDark ? "#FFFFFF" : "#1E293B" }}>Bridge</span>
         <span className="gradient-text">Forward</span>
@@ -153,7 +152,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
 
           <div className="pt-8 text-center text-xs text-silver/60 tracking-wide">
-            © {new Date().getFullYear()} Bridge Forward. All rights reserved.
+            © {new Date().getFullYear()} BridgeForward. All rights reserved.
           </div>
         </div>
       </footer>
