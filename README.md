@@ -6,7 +6,7 @@ Built with React, TypeScript, Vite, Tailwind CSS, and Framer Motion.
 
 ---
 
-## 🚀 How to Enable GitHub Pages (Guide) 
+## 🚀 How to Enable GitHub Pages (Guide 1) 
 
 Since this repository is on a custom GitHub account (`KJBuilds`), the repository owner needs to perform a quick one-time setup on GitHub to enable automated builds and hosting:
 
