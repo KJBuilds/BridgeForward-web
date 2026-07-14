@@ -14,8 +14,8 @@ export default function Contact() {
   const [type, setType] = useState(inquiryTypes[0]);
 
   usePageMeta(
-    "Contact | Bridge Forward",
-    "Contact Bridge Forward to discuss cybersecurity consulting, workforce development partnerships, scholarship support, or speaking engagements."
+    "Contact | BridgeForward",
+    "Contact BridgeForward to discuss cybersecurity consulting, workforce development partnerships, scholarship support, or speaking engagements."
   );
 
   const onSubmit = (e: React.FormEvent) => {

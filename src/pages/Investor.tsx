@@ -23,8 +23,8 @@ const impact = [
 
 export default function Investor() {
   usePageMeta(
-    "Investors & Partners | Bridge Forward",
-    "Explore corporate, government, and grant partnership opportunities with Bridge Forward's cybersecurity-led social enterprise model."
+    "Investors & Partners | BridgeForward",
+    "Explore corporate, government, and grant partnership opportunities with BridgeForward's cybersecurity-led social enterprise model."
   );
 
   return (
@@ -40,7 +40,7 @@ export default function Investor() {
             A revenue-funded <span className="gradient-text">community impact model</span>.
           </h1>
           <p className="mt-6 text-lg text-silver max-w-3xl leading-relaxed">
-            Bridge Forward operates as a cybersecurity consulting firm whose commercial success directly funds
+            BridgeForward operates as a cybersecurity consulting firm whose commercial success directly funds
             workforce development and community legacy programs — a self-sustaining, scalable model for
             measurable impact.
           </p>

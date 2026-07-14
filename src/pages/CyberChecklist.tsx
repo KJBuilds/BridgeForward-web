@@ -46,8 +46,8 @@ const valuePoints = [
 
 export default function CyberChecklist() {
   usePageMeta(
-    "Free Cyber Risk Checklist | Bridge Forward",
-    "Download Bridge Forward's free cyber risk checklist to uncover blind spots, evaluate incident readiness, and understand your organization's risk level."
+    "Free Cyber Risk Checklist | BridgeForward",
+    "Download BridgeForward's free cyber risk checklist to uncover blind spots, evaluate incident readiness, and understand your organization's risk level."
   );
 
   return (

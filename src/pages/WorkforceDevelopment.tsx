@@ -28,8 +28,8 @@ const programs = [
 
 export default function WorkforceDevelopment() {
   usePageMeta(
-    "Workforce Development | Bridge Forward",
-    "Bridge Forward Workforce Development connects aspiring professionals to cybersecurity careers through the CyberPlug community, mentorship, training, and internships."
+    "Workforce Development | BridgeForward",
+    "BridgeForward Workforce Development connects aspiring professionals to cybersecurity careers through the CyberPlug community, mentorship, training, and internships."
   );
 
   return (
@@ -39,13 +39,13 @@ export default function WorkforceDevelopment() {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] glow-bg" />
         <div className="container mx-auto px-4 md:px-6 relative max-w-5xl">
           <p className="font-display text-xs tracking-[0.35em] text-bf-blue uppercase mb-5">
-            Bridge Forward Workforce Development
+            BridgeForward Workforce Development
           </p>
           <h1 className="font-heading text-4xl md:text-6xl font-extrabold text-white leading-tight">
             Career pathways designed to <span className="gradient-text">expand access</span>, capability, and momentum.
           </h1>
           <p className="mt-6 text-lg text-silver max-w-3xl leading-relaxed">
-            Bridge Forward Workforce Development helps individuals access technology careers through community, mentorship, training, internships, and professional ecosystem exposure.
+            BridgeForward Workforce Development helps individuals access technology careers through community, mentorship, training, internships, and professional ecosystem exposure.
           </p>
         </div>
       </section>
@@ -73,7 +73,7 @@ export default function WorkforceDevelopment() {
               How it connects to the ecosystem
             </h3>
             <p className="text-silver text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
-              Workforce development is funded and strengthened by the consulting side of Bridge Forward, allowing opportunity-building efforts to grow with purpose and sustainability.
+              Workforce development is funded and strengthened by the consulting side of BridgeForward, allowing opportunity-building efforts to grow with purpose and sustainability.
             </p>
           </div>
         </div>
@@ -84,7 +84,7 @@ export default function WorkforceDevelopment() {
       <CTABanner
         eyebrow="Workforce"
         title="Build the future workforce"
-        body="Bridge Forward connects aspiring professionals to cybersecurity careers through mentorship, training, and community — funded by consulting revenue."
+        body="BridgeForward connects aspiring professionals to cybersecurity careers through mentorship, training, and community — funded by consulting revenue."
         primaryLabel="Get Involved"
         primaryHref="/contact"
       />

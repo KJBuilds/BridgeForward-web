@@ -3,21 +3,21 @@ import { Laptop, House, GraduationCap, ArrowRight } from "lucide-react";
 
 const initiatives = [
   {
-    title: "Bridge Forward Tech Center",
+    title: "BridgeForward Tech Center",
     icon: Laptop,
     color: "primary" as const,
     description:
       "Cybersecurity, AI, governance, compliance, and tech pathway development for individuals and small businesses.",
   },
   {
-    title: "Bridge Forward Legacy House",
+    title: "BridgeForward Legacy House",
     icon: House,
     color: "accent" as const,
     description:
       "A legacy-centered home project rooted in belonging, family tradition, stewardship, and generational continuity.",
   },
   {
-    title: "Bridge Forward Legacy of Encouragement Scholarship",
+    title: "BridgeForward Legacy of Encouragement Scholarship",
     icon: GraduationCap,
     color: "secondary" as const,
     description:
@@ -41,7 +41,7 @@ export default function Initiatives() {
             Three initiatives. One unified purpose.
           </h2>
           <p className="text-muted-foreground">
-            Bridge Forward Collective brings together technology empowerment, legacy preservation,
+            BridgeForward Collective brings together technology empowerment, legacy preservation,
             and educational encouragement into a single ecosystem for generational advancement.
           </p>
         </div>

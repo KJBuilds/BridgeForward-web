@@ -36,7 +36,7 @@ const groups = [
 
 export default function CyberConsulting() {
   usePageMeta(
-    "Cyber Consulting Services | Bridge Forward",
+    "Cyber Consulting Services | BridgeForward",
     "Practical cybersecurity consulting — risk assessments, penetration testing, vCISO services, governance & compliance readiness, and tabletop exercises."
   );
 
@@ -47,13 +47,13 @@ export default function CyberConsulting() {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] glow-bg" />
         <div className="container mx-auto px-4 md:px-6 relative max-w-5xl">
           <p className="font-display text-xs tracking-[0.35em] text-bf-blue uppercase mb-5">
-            Bridge Forward Cyber Consulting
+            BridgeForward Cyber Consulting
           </p>
           <h1 className="font-heading text-4xl md:text-6xl font-extrabold text-white leading-tight">
             Cybersecurity services that <span className="gradient-text">strengthen resilience</span> and generate sustainable impact.
           </h1>
           <p className="mt-6 text-lg text-silver max-w-3xl leading-relaxed">
-            Bridge Forward provides practical, strategic cybersecurity consulting services for organizations seeking accessible support in risk, governance, testing, and readiness.
+            BridgeForward provides practical, strategic cybersecurity consulting services for organizations seeking accessible support in risk, governance, testing, and readiness.
           </p>
         </div>
       </section>
@@ -117,10 +117,10 @@ export default function CyberConsulting() {
               Revenue Engine
             </p>
             <h3 className="font-heading text-2xl font-bold text-white mb-4">
-              Cyber consulting is the revenue engine behind the Bridge Forward ecosystem
+              Cyber consulting is the revenue engine behind the BridgeForward ecosystem
             </h3>
             <p className="text-silver text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
-              By partnering with Bridge Forward for cybersecurity services, organizations strengthen their own resilience while helping fund workforce development and legacy initiatives.
+              By partnering with BridgeForward for cybersecurity services, organizations strengthen their own resilience while helping fund workforce development and legacy initiatives.
             </p>
           </div>
         </div>
@@ -129,7 +129,7 @@ export default function CyberConsulting() {
       <CTABanner
         eyebrow="Resilience"
         title="Let's build your cybersecurity resilience"
-        body="From risk assessments to compliance readiness — Bridge Forward provides the accessible, expert guidance your organization needs."
+        body="From risk assessments to compliance readiness — BridgeForward provides the accessible, expert guidance your organization needs."
         primaryLabel="Request a Consultation"
       />
     </>

@@ -24,7 +24,7 @@ export default function WhoWeServe() {
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
             SMBs are the fastest-growing target for cyber attacks — and the least protected.
-            Bridge Forward was built specifically for businesses like yours: organizations that
+            BridgeForward was built specifically for businesses like yours: organizations that
             need enterprise-grade security strategy without the enterprise price tag.
           </p>
         </motion.div>

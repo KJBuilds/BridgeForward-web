@@ -43,7 +43,7 @@ export default function Hero() {
               className="mt-6 text-lg leading-relaxed max-w-2xl"
               style={{ color: "#475569" }}
             >
-              Bridge Forward is a cybersecurity-led ecosystem that helps organizations strengthen digital resilience through consulting services while reinvesting revenue into workforce development, scholarships, and legacy-centered community initiatives.
+              BridgeForward is a cybersecurity-led ecosystem that helps organizations strengthen digital resilience through consulting services while reinvesting revenue into workforce development, scholarships, and legacy-centered community initiatives.
             </motion.p>
 
             <motion.div
@@ -75,7 +75,7 @@ export default function Hero() {
           >
             <div className="rounded-xl gradient-hero-bg p-6 text-white">
               <p className="text-xs uppercase tracking-[0.2em] opacity-80 font-semibold mb-2">Revenue Engine</p>
-              <h2 className="font-heading text-2xl font-bold mb-3">Bridge Forward Cyber Consulting</h2>
+              <h2 className="font-heading text-2xl font-bold mb-3">BridgeForward Cyber Consulting</h2>
               <p className="text-sm opacity-90 leading-relaxed">
                 Practical cybersecurity and resilience services for organizations that need accessible, strategic, and trusted support.
               </p>

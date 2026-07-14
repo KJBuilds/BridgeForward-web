@@ -16,7 +16,7 @@ export default function About() {
             transition={{ duration: 0.5 }}
             className="text-muted-foreground leading-relaxed text-lg"
           >
-            Rooted in encouragement, family love, and belief in others, Bridge Forward exists to create
+            Rooted in encouragement, family love, and belief in others, BridgeForward exists to create
             environments where people feel inspired, supported, and equipped to move forward.
           </motion.p>
         </div>

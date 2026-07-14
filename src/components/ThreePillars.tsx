@@ -46,7 +46,7 @@ export default function ThreePillars() {
             <span className="gradient-text">Opportunity creates impact.</span>
           </h2>
           <p className="mt-5 text-lg text-silver leading-relaxed max-w-2xl">
-            Bridge Forward is structured so that cybersecurity consulting funds workforce development and legacy-centered community initiatives.
+            BridgeForward is structured so that cybersecurity consulting funds workforce development and legacy-centered community initiatives.
           </p>
         </motion.div>
 
@@ -84,7 +84,7 @@ export default function ThreePillars() {
             Consulting Revenue Funds Scholarships & Workforce Programs
           </h3>
           <p className="text-white/90 text-sm md:text-base leading-relaxed">
-            Bridge Forward uses consulting revenue to build a sustainable model where business value and community impact reinforce one another.
+            BridgeForward uses consulting revenue to build a sustainable model where business value and community impact reinforce one another.
           </p>
         </motion.div>
       </div>

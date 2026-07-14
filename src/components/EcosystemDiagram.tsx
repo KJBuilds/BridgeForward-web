@@ -37,7 +37,7 @@ export default function EcosystemDiagram() {
       <div className="container mx-auto px-4 md:px-6 relative">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <p className="font-display text-xs tracking-[0.35em] text-bf-blue uppercase mb-4">
-            The Bridge Forward Ecosystem
+            The BridgeForward Ecosystem
           </p>
           <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-white leading-tight">
             Revenue drives <span className="gradient-text">opportunity</span>.<br />

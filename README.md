@@ -1,6 +1,6 @@
-# Bridge Forward Website
+# BridgeForward Website
 
-The official website for **Bridge Forward**, a cybersecurity-led ecosystem that helps organizations strengthen digital resilience through consulting services while reinvesting revenue into workforce development, scholarships, and legacy-centered community initiatives.
+The official website for **BridgeForward**, a cybersecurity-led ecosystem that helps organizations strengthen digital resilience through consulting services while reinvesting revenue into workforce development, scholarships, and legacy-centered community initiatives.
 
 Built with React, TypeScript, Vite, Tailwind CSS, and Framer Motion.
 

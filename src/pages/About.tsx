@@ -7,7 +7,7 @@ const pillars = [
   {
     icon: ShieldCheck,
     title: "Cybersecurity-led",
-    body: "Cyber consulting is the revenue engine that supports the broader Bridge Forward ecosystem.",
+    body: "Cyber consulting is the revenue engine that supports the broader BridgeForward ecosystem.",
   },
   {
     icon: GraduationCap,
@@ -17,7 +17,7 @@ const pillars = [
   {
     icon: Users,
     title: "Community-rooted",
-    body: "Bridge Forward is grounded in encouragement, belief in others, and commitment to community impact.",
+    body: "BridgeForward is grounded in encouragement, belief in others, and commitment to community impact.",
   },
   {
     icon: HeartHandshake,
@@ -44,8 +44,8 @@ const focus = [
 
 export default function About() {
   usePageMeta(
-    "About | Bridge Forward",
-    "Bridge Forward is a cybersecurity-led ecosystem founded by Kisha Jefferson, combining consulting, workforce development, and legacy-driven community initiatives."
+    "About | BridgeForward",
+    "BridgeForward is a cybersecurity-led ecosystem founded by Kisha Jefferson, combining consulting, workforce development, and legacy-driven community initiatives."
   );
 
   return (
@@ -54,12 +54,12 @@ export default function About() {
         <div className="absolute inset-0 hex-grid opacity-50" />
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] glow-bg" />
         <div className="container mx-auto px-4 md:px-6 relative max-w-5xl">
-          <p className="font-display text-xs tracking-[0.35em] text-bf-blue uppercase mb-5">About Bridge Forward</p>
+          <p className="font-display text-xs tracking-[0.35em] text-bf-blue uppercase mb-5">About BridgeForward</p>
           <h1 className="font-heading text-4xl md:text-6xl font-extrabold text-white leading-tight">
             A cybersecurity-led ecosystem built to <span className="gradient-text">secure businesses</span> and empower futures.
           </h1>
           <p className="mt-6 text-lg text-silver max-w-3xl leading-relaxed">
-            Bridge Forward combines cybersecurity consulting, workforce development, and legacy-driven community initiatives into one model designed for resilience, opportunity, and generational impact.
+            BridgeForward combines cybersecurity consulting, workforce development, and legacy-driven community initiatives into one model designed for resilience, opportunity, and generational impact.
           </p>
         </div>
       </section>
@@ -106,7 +106,7 @@ export default function About() {
             </h2>
             <p className="text-silver text-base md:text-lg leading-relaxed mb-6">
               A cybersecurity executive with 20+ years of experience across enterprise security, governance,
-              risk, and operational leadership. Kisha founded Bridge Forward to channel her practice into a
+              risk, and operational leadership. Kisha founded BridgeForward to channel her practice into a
               sustainable model that strengthens organizations while opening cybersecurity careers to the next
               generation.
             </p>
@@ -163,7 +163,7 @@ export default function About() {
 
       <CTABanner
         eyebrow="Connect"
-        title="Connect with Bridge Forward"
+        title="Connect with BridgeForward"
         body="Whether you're exploring cybersecurity services, workforce programs, or legacy partnerships — we'd love to hear from you."
         primaryLabel="Get in Touch"
       />

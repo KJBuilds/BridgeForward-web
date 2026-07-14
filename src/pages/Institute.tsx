@@ -19,8 +19,8 @@ const phases = [
 
 export default function Institute() {
   usePageMeta(
-    "Community Cybersecurity Institute | Bridge Forward",
-    "Bridge Forward's long-term vision for a physical Community Cybersecurity Institute combining education, business resilience advisory, and workforce acceleration."
+    "Community Cybersecurity Institute | BridgeForward",
+    "BridgeForward's long-term vision for a physical Community Cybersecurity Institute combining education, business resilience advisory, and workforce acceleration."
   );
 
   return (
@@ -36,7 +36,7 @@ export default function Institute() {
             The Future <span className="gradient-text">Community Cybersecurity Institute</span>.
           </h1>
           <p className="mt-6 text-lg text-silver max-w-3xl leading-relaxed">
-            Bridge Forward is building toward a physical institute anchored in Tulsa's innovation ecosystem —
+            BridgeForward is building toward a physical institute anchored in Tulsa's innovation ecosystem —
             combining cybersecurity education, business resilience services, and an innovation lab under one roof.
           </p>
         </div>

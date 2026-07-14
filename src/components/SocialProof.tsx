@@ -3,7 +3,7 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Bridge Forward gave us clarity on where our biggest risks were — and a plan to fix them. No fluff, just results.",
+    quote: "BridgeForward gave us clarity on where our biggest risks were — and a plan to fix them. No fluff, just results.",
     name: "Client Testimonial",
     role: "Coming Soon",
   },
@@ -13,7 +13,7 @@ const testimonials = [
     role: "Coming Soon",
   },
   {
-    quote: "Working with Bridge Forward meant we could finally stop guessing about our security posture and start acting on real data.",
+    quote: "Working with BridgeForward meant we could finally stop guessing about our security posture and start acting on real data.",
     name: "Client Testimonial",
     role: "Coming Soon",
   },

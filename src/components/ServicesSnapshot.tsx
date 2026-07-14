@@ -16,7 +16,7 @@ const pillars = [
   {
     title: "Sustainable Impact Model",
     icon: HeartHandshake,
-    description: "Consulting services are the revenue engine that supports Bridge Forward's broader workforce and legacy initiatives.",
+    description: "Consulting services are the revenue engine that supports BridgeForward's broader workforce and legacy initiatives.",
   },
 ];
 
@@ -37,7 +37,7 @@ export default function ServicesSnapshot() {
             Cybersecurity services designed to <span className="gradient-text">generate revenue</span> and strengthen resilience
           </h2>
           <p className="text-lg text-[#475569] leading-relaxed">
-            Bridge Forward helps businesses improve cyber posture, clarify governance, prepare for risk, and build confidence in their digital operations through consulting and advisory services.
+            BridgeForward helps businesses improve cyber posture, clarify governance, prepare for risk, and build confidence in their digital operations through consulting and advisory services.
           </p>
         </motion.div>
 

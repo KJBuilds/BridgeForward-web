@@ -3,7 +3,7 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Bridge Forward represents exactly what our community needs — a vision rooted in family, powered by technology, and built for generations to come.",
+    quote: "BridgeForward represents exactly what our community needs — a vision rooted in family, powered by technology, and built for generations to come.",
     name: "Community Partner",
     role: "Tulsa, Oklahoma",
   },
@@ -13,7 +13,7 @@ const testimonials = [
     role: "Technology & Workforce Development",
   },
   {
-    quote: "What makes Bridge Forward special is the heart behind it — encouragement converted into opportunity, generation after generation.",
+    quote: "What makes BridgeForward special is the heart behind it — encouragement converted into opportunity, generation after generation.",
     name: "Education Supporter",
     role: "Scholarship Advocate",
   },

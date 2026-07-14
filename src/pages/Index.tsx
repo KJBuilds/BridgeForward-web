@@ -8,8 +8,8 @@ import { usePageMeta } from "@/hooks/use-page-meta";
 
 export default function Index() {
   usePageMeta(
-    "Bridge Forward | Cybersecurity-Led Social Enterprise",
-    "Bridge Forward delivers executive cybersecurity consulting while reinvesting revenue into workforce development, scholarships, and community legacy initiatives."
+    "BridgeForward | Cybersecurity-Led Social Enterprise",
+    "BridgeForward delivers executive cybersecurity consulting while reinvesting revenue into workforce development, scholarships, and community legacy initiatives."
   );
 
   return (
@@ -20,7 +20,7 @@ export default function Index() {
       <WhyBridgeForward />
       <CTABanner
         title="Protect your business. Power something bigger."
-        body="Partner with Bridge Forward for cybersecurity services that strengthen resilience while helping fund workforce and legacy initiatives that move communities forward."
+        body="Partner with BridgeForward for cybersecurity services that strengthen resilience while helping fund workforce and legacy initiatives that move communities forward."
         primaryLabel="Request a Consultation"
         primaryHref="/contact"
       />

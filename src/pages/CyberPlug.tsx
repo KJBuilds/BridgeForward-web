@@ -13,7 +13,7 @@ const features = [
 
 export default function CyberPlug() {
   usePageMeta(
-    "CyberPlug Community | Bridge Forward",
+    "CyberPlug Community | BridgeForward",
     "CyberPlug connects aspiring and emerging cybersecurity professionals to networking, mentorship, job opportunities, and community events."
   );
 
@@ -30,7 +30,7 @@ export default function CyberPlug() {
             Where <span className="gradient-text">opportunity</span> meets <span className="gradient-text">community</span>.
           </h1>
           <p className="mt-6 text-lg text-silver max-w-3xl leading-relaxed">
-            CyberPlug is the professional community supporting Bridge Forward's workforce development mission —
+            CyberPlug is the professional community supporting BridgeForward's workforce development mission —
             a place for emerging professionals, mentors, and employers to find each other.
           </p>
         </div>

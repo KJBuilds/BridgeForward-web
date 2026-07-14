@@ -36,7 +36,7 @@ export default function Newsletter() {
       >
         <p className="text-sm font-semibold tracking-widest uppercase text-primary mb-3">Stay Connected</p>
         <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
-          Join the Bridge Forward community
+          Join the BridgeForward community
         </h2>
         <p className="text-muted-foreground mb-8">
           Get updates on services, CyberPlug programs, and community initiatives.

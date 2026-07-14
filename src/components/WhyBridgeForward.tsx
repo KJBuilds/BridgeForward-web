@@ -31,7 +31,7 @@ export default function WhyBridgeForward() {
       <div className="absolute inset-0 hex-grid opacity-30" />
       <div className="container mx-auto px-4 md:px-6 relative">
         <motion.div {...fadeUp} transition={{ duration: 0.5 }} className="max-w-3xl mb-16">
-          <p className="font-display text-xs tracking-[0.4em] text-bf-blue uppercase mb-4">Why Bridge Forward</p>
+          <p className="font-display text-xs tracking-[0.4em] text-bf-blue uppercase mb-4">Why BridgeForward</p>
           <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-[#1E293B] leading-tight">
             Built to protect organizations<br />
             <span className="gradient-text">and expand futures</span>

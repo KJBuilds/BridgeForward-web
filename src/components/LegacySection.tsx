@@ -9,7 +9,7 @@ const initiatives = [
     description: "A scholarship honoring encouragement, belief in others, and community-mindedness — funded by consulting revenue.",
   },
   {
-    title: "Bridge Forward Legacy House",
+    title: "BridgeForward Legacy House",
     icon: Home,
     description: "A family-rooted legacy project preserving story, tradition, and generational continuity through tangible stewardship.",
   },

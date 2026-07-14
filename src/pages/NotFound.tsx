@@ -5,7 +5,7 @@ import { usePageMeta } from "@/hooks/use-page-meta";
 const NotFound = () => {
   const location = useLocation();
 
-  usePageMeta("Page Not Found | Bridge Forward", "The page you're looking for doesn't exist.");
+  usePageMeta("Page Not Found | BridgeForward", "The page you're looking for doesn't exist.");
 
   useEffect(() => {
     console.error("404 Error: User attempted to access non-existent route:", location.pathname);
