@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://kjbuilds.github.io/BridgeForward-web/sitemap.xml
+Sitemap: https://www.bridgeforward.tech/sitemap.xml
