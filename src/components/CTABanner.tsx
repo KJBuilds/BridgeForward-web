@@ -1,3 +1,4 @@
+// BrainID: Sonnet 5 | Date: 2026-07-25 | Action: Made secondary CTA opt-in (was unconditional + broken under HashRouter); now a plain in-page anchor instead of a router Link
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
@@ -17,8 +18,8 @@ export default function CTABanner({
   body = "Every consulting engagement funds the next scholarship, internship, and community program.",
   primaryLabel = "Request a Consultation",
   primaryHref = "/contact",
-  secondaryLabel = "Explore Our Ecosystem",
-  secondaryHref = "/#ecosystem",
+  secondaryLabel,
+  secondaryHref,
 }: CTABannerProps) {
   return (
     <section className="bg-white py-20 md:py-24">
@@ -56,13 +57,24 @@ export default function CTABanner({
               >
                 {primaryLabel} <ArrowRight size={18} />
               </Link>
-              <Link
-                to={secondaryHref}
-                className="inline-flex items-center justify-center gap-2 rounded-full px-8 h-14 text-base font-semibold border-2 transition-all hover:bg-white/10"
-                style={{ borderColor: "rgba(255,255,255,0.85)", color: "#FFFFFF" }}
-              >
-                {secondaryLabel}
-              </Link>
+              {secondaryLabel && secondaryHref && (
+                <a
+                  href={secondaryHref}
+                  onClick={(e) => {
+                    // HashRouter treats anything after "#" as a route, so a real
+                    // navigation to "#ecosystem" 404s instead of scrolling. Do the
+                    // scroll ourselves and skip the router entirely.
+                    if (secondaryHref.startsWith("#")) {
+                      e.preventDefault();
+                      document.getElementById(secondaryHref.slice(1))?.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                  className="inline-flex items-center justify-center gap-2 rounded-full px-8 h-14 text-base font-semibold border-2 transition-all hover:bg-white/10"
+                  style={{ borderColor: "rgba(255,255,255,0.85)", color: "#FFFFFF" }}
+                >
+                  {secondaryLabel}
+                </a>
+              )}
             </div>
           </div>
         </div>

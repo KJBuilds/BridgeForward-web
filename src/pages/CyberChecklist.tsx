@@ -11,8 +11,10 @@ import {
   Download,
   CalendarCheck,
 } from "lucide-react";
+// BrainID: Sonnet 5 | Date: 2026-07-25 | Action: Disabled inert download buttons, added honest pending-PDF notice
 import { Link } from "react-router-dom";
 import { usePageMeta } from "@/hooks/use-page-meta";
+import WorkInProgressNotice from "@/components/WorkInProgressNotice";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -100,11 +102,18 @@ export default function CyberChecklist() {
           >
             <Button
               size="lg"
-              className="text-base rounded-lg h-14 px-10 text-lg"
+              disabled
+              className="text-base rounded-lg h-14 px-10 text-lg opacity-70 cursor-not-allowed"
             >
               <Download className="mr-2 h-5 w-5" />
               Download the Cyber Risk Checklist
             </Button>
+            <WorkInProgressNotice
+              title="Checklist isn't ready yet"
+              className="mt-6 max-w-xl mx-auto text-left"
+            >
+              The PDF is still being finalized — check back soon, or reach out directly to request an early copy.
+            </WorkInProgressNotice>
           </motion.div>
         </div>
       </section>
@@ -306,11 +315,18 @@ export default function CyberChecklist() {
           <motion.div variants={fadeUp} custom={2} className="mt-8">
             <Button
               size="lg"
-              className="text-base rounded-lg h-14 px-10 text-lg bg-primary-foreground text-background hover:bg-primary-foreground/90"
+              disabled
+              className="text-base rounded-lg h-14 px-10 text-lg bg-primary-foreground text-background opacity-70 cursor-not-allowed"
             >
               <Download className="mr-2 h-5 w-5" />
               Download the Cyber Risk Checklist
             </Button>
+            <WorkInProgressNotice
+              title="Checklist isn't ready yet"
+              className="mt-6 max-w-xl mx-auto text-left bg-white/95"
+            >
+              The PDF is still being finalized — check back soon, or reach out directly to request an early copy.
+            </WorkInProgressNotice>
           </motion.div>
         </motion.div>
       </section>

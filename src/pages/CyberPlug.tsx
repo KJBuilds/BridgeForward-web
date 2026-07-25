@@ -57,7 +57,6 @@ export default function CyberPlug() {
         title="Plug into the next generation of cybersecurity talent."
         body="Whether you're starting your career, mentoring others, or hiring — there's a seat for you."
         primaryLabel="Get Involved"
-        secondaryLabel="Explore the Ecosystem"
       />
     </>
   );

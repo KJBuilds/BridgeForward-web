@@ -84,7 +84,6 @@ export default function Institute() {
         title="Help us build Tulsa's cybersecurity future."
         body="We're seeking corporate, government, grant, and community partners aligned with the Institute vision."
         primaryLabel="Become a Partner"
-        secondaryLabel="See the Ecosystem"
       />
     </>
   );

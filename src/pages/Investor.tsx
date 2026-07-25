@@ -97,6 +97,8 @@ export default function Investor() {
         title="Let's build a measurable impact partnership."
         body="We welcome conversations with corporate, government, and philanthropic partners aligned with the model."
         primaryLabel="Start a Conversation"
+        secondaryLabel="Explore the Ecosystem"
+        secondaryHref="#ecosystem"
       />
     </>
   );

@@ -1,7 +1,8 @@
+// BrainID: Sonnet 5 | Date: 2026-07-25 | Action: Removed fake submit-success toast, added honest pending-backend notice
 import { useState } from "react";
 import { Mail, Phone, Globe, Send } from "lucide-react";
-import { toast } from "@/hooks/use-toast";
 import { usePageMeta } from "@/hooks/use-page-meta";
+import WorkInProgressNotice from "@/components/WorkInProgressNotice";
 
 const inquiryTypes = [
   "Business Inquiry",
@@ -20,11 +21,6 @@ export default function Contact() {
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message received",
-      description: "Thanks — we'll be in touch within one business day.",
-    });
-    (e.target as HTMLFormElement).reset();
   };
 
   return (
@@ -71,6 +67,10 @@ export default function Contact() {
           </div>
 
           <form onSubmit={onSubmit} className="lg:col-span-3 glass-card rounded-2xl p-8 space-y-5">
+            <WorkInProgressNotice title="This form isn't connected yet">
+              We haven't wired this up to a live inbox yet — for now, please reach out directly by email or
+              phone using the cards to the left, and we'll follow up as soon as it's ready.
+            </WorkInProgressNotice>
             <div>
               <label className="text-xs uppercase tracking-wider text-silver mb-2 block">Inquiry Type</label>
               <div className="flex flex-wrap gap-2">
