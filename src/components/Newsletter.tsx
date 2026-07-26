@@ -1,17 +1,25 @@
+// BrainID: Sonnet 5 | Date: 2026-07-25 | Action: Replaced fake subscribe-success toast with an honest "coming soon" modal
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Send } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
 import { z } from "zod";
 
 const emailSchema = z.string().trim().email("Please enter a valid email").max(255);
 
 export default function Newsletter() {
-  const { toast } = useToast();
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
+  const [showComingSoon, setShowComingSoon] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -21,8 +29,7 @@ export default function Newsletter() {
       return;
     }
     setError("");
-    toast({ title: "You're on the list!", description: "Thank you for joining our community." });
-    setEmail("");
+    setShowComingSoon(true);
   };
 
   return (
@@ -57,6 +64,18 @@ export default function Newsletter() {
           </Button>
         </form>
       </motion.div>
+
+      <AlertDialog open={showComingSoon} onOpenChange={setShowComingSoon}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Coming soon</AlertDialogTitle>
+            <AlertDialogDescription>
+              Newsletter signup is still a work in progress — we're not capturing subscribers yet. Check back soon!
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogAction onClick={() => setShowComingSoon(false)}>Got it</AlertDialogAction>
+        </AlertDialogContent>
+      </AlertDialog>
     </section>
   );
 }

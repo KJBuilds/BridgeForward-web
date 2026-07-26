@@ -43,11 +43,11 @@ export default function Contact() {
       <section className="bg-background py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6 max-w-6xl grid lg:grid-cols-5 gap-10">
           <div className="lg:col-span-2 space-y-6">
-            <a href="mailto:Kisha@BridgeForward.tech" className="glass-card rounded-2xl p-6 flex items-center gap-4 hover:border-bf-blue/50">
+            <a href="mailto:info@BridgeForward.tech" className="glass-card rounded-2xl p-6 flex items-center gap-4 hover:border-bf-blue/50">
               <Mail className="w-5 h-5 text-bf-blue" />
               <div>
                 <p className="text-xs uppercase tracking-wider text-silver">Email</p>
-                <p className="text-white font-medium">Kisha@BridgeForward.tech</p>
+                <p className="text-white font-medium">info@BridgeForward.tech</p>
               </div>
             </a>
             <a href="tel:9186303998" className="glass-card rounded-2xl p-6 flex items-center gap-4 hover:border-bf-blue/50">

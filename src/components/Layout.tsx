@@ -139,7 +139,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div>
               <h4 className="text-xs font-semibold uppercase tracking-[0.18em] text-white mb-4">Contact</h4>
               <ul className="space-y-3 text-sm text-silver">
-                <li>Kisha@BridgeForward.tech</li>
+                <li>info@BridgeForward.tech</li>
                 <li>918-630-3998</li>
                 <li>Tulsa, Oklahoma</li>
                 <li>
