@@ -1,4 +1,5 @@
-import { useState } from "react";
+// BrainID: Sonnet 5 | Date: 2026-07-25 | Action: Added aria-expanded + focus management to the mobile menu toggle for keyboard/screen-reader users
+import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Linkedin, Mail } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
@@ -28,6 +29,19 @@ function Brandmark({ onDark = false }: { onDark?: boolean }) {
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [open, setOpen] = useState(false);
   const location = useLocation();
+  const menuToggleRef = useRef<HTMLButtonElement>(null);
+  const firstMobileLinkRef = useRef<HTMLAnchorElement>(null);
+
+  useEffect(() => {
+    if (open) {
+      firstMobileLinkRef.current?.focus();
+    }
+  }, [open]);
+
+  const closeMenu = () => {
+    setOpen(false);
+    menuToggleRef.current?.focus();
+  };
 
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col">
@@ -58,10 +72,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </nav>
 
           <button
+            ref={menuToggleRef}
             className="xl:hidden"
             style={{ color: "#1E293B" }}
             onClick={() => setOpen(!open)}
             aria-label="Toggle menu"
+            aria-expanded={open}
+            aria-controls="mobile-menu"
           >
             {open ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -70,19 +87,24 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <AnimatePresence>
           {open && (
             <motion.div
+              id="mobile-menu"
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               className="xl:hidden overflow-hidden bg-white border-b border-[#E2E8F0]"
+              onKeyDown={(e) => {
+                if (e.key === "Escape") closeMenu();
+              }}
             >
               <nav className="flex flex-col gap-4 p-6">
-                {navLinks.map((l) => (
+                {navLinks.map((l, i) => (
                   <Link
                     key={l.href}
+                    ref={i === 0 ? firstMobileLinkRef : undefined}
                     to={l.href}
                     className="text-base font-medium"
                     style={{ color: "#475569" }}
-                    onClick={() => setOpen(false)}
+                    onClick={closeMenu}
                   >
                     {l.label}
                   </Link>
@@ -90,7 +112,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <Link
                   to="/contact"
                   className="btn-brand inline-flex w-fit items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold"
-                  onClick={() => setOpen(false)}
+                  onClick={closeMenu}
                 >
                   Request Consultation
                 </Link>

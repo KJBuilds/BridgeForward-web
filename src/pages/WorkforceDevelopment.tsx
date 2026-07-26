@@ -1,4 +1,6 @@
-import { GraduationCap, Briefcase, Users, Mic, Compass, Award, HeartHandshake } from "lucide-react";
+// BrainID: Sonnet 5 | Date: 2026-07-25 | Action: Added a real link to /cyberplug — previously mentioned as plain text with no entry point anywhere in the app
+import { GraduationCap, Briefcase, Users, Mic, Compass, Award, HeartHandshake, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import CareerJourneyTimeline from "@/components/CareerJourneyTimeline";
 import CTABanner from "@/components/CTABanner";
 import { usePageMeta } from "@/hooks/use-page-meta";
@@ -8,6 +10,7 @@ const programs = [
     icon: Users,
     title: "CyberPlug Community",
     body: "A community designed to connect aspiring and emerging professionals to cybersecurity opportunity, visibility, and support.",
+    href: "/cyberplug",
   },
   {
     icon: GraduationCap,
@@ -54,12 +57,20 @@ export default function WorkforceDevelopment() {
         <div className="container mx-auto px-4 md:px-6 space-y-20">
           <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             {programs.map((p) => (
-              <div key={p.title} className="glass-card rounded-2xl p-8">
+              <div key={p.title} className="glass-card rounded-2xl p-8 flex flex-col">
                 <div className="w-12 h-12 rounded-xl gradient-brand-bg flex items-center justify-center mb-6 shadow-glow">
                   <p.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="font-heading text-xl font-bold text-white mb-3">{p.title}</h3>
-                <p className="text-sm text-silver leading-relaxed">{p.body}</p>
+                <p className="text-sm text-silver leading-relaxed flex-1">{p.body}</p>
+                {p.href && (
+                  <Link
+                    to={p.href}
+                    className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-bf-blue transition-colors"
+                  >
+                    Learn more <ArrowRight size={14} />
+                  </Link>
+                )}
               </div>
             ))}
           </div>

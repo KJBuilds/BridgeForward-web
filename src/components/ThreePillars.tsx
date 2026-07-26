@@ -21,7 +21,7 @@ const pillars = [
     icon: Heart,
     eyebrow: "SCHOLARSHIP & COMMUNITY",
     title: "Legacy Initiatives",
-    body: "Scholarship program, legacy home, and community support efforts that preserve family story, expand opportunity, and remain generational continuity.",
+    body: "Scholarship program, legacy home, and community support efforts that preserve family story, expand opportunity, and ensure generational continuity.",
     href: "/legacy-initiatives",
   },
 ];
