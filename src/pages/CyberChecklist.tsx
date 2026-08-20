@@ -14,6 +14,7 @@ import {
 // BrainID: Sonnet 5 | Date: 2026-07-25 | Action: Disabled inert download buttons, added honest pending-PDF notice
 import { Link } from "react-router-dom";
 import { usePageMeta } from "@/hooks/use-page-meta";
+import { getRouteMeta } from "@/lib/route-meta";
 import WorkInProgressNotice from "@/components/WorkInProgressNotice";
 
 const fadeUp = {
@@ -47,10 +48,11 @@ const valuePoints = [
 ];
 
 export default function CyberChecklist() {
-  usePageMeta(
-    "Free Cyber Risk Checklist | BridgeForward",
-    "Download BridgeForward's free cyber risk checklist to uncover blind spots, evaluate incident readiness, and understand your organization's risk level."
-  );
+  // Title/description sourced from src/lib/route-meta.js -- the same map the
+  // post-build static-meta generator (scripts/generate-static-meta.mjs)
+  // reads, so the two can't drift apart.
+  const { title, description } = getRouteMeta("/cyber-checklist");
+  usePageMeta(title, description);
 
   return (
     <div className="min-h-screen bg-background text-foreground">

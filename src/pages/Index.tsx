@@ -5,12 +5,14 @@ import WhyBridgeForward from "@/components/WhyBridgeForward";
 import CTABanner from "@/components/CTABanner";
 import Newsletter from "@/components/Newsletter";
 import { usePageMeta } from "@/hooks/use-page-meta";
+import { getRouteMeta } from "@/lib/route-meta";
 
 export default function Index() {
-  usePageMeta(
-    "BridgeForward | Cybersecurity-Led Social Enterprise",
-    "BridgeForward delivers executive cybersecurity consulting while reinvesting revenue into workforce development, scholarships, and community legacy initiatives."
-  );
+  // Title/description sourced from src/lib/route-meta.js -- the same map the
+  // post-build static-meta generator (scripts/generate-static-meta.mjs)
+  // reads, so the two can't drift apart.
+  const { title, description } = getRouteMeta("/");
+  usePageMeta(title, description);
 
   return (
     <>

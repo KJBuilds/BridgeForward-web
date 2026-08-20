@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ShieldCheck, Search, FileCheck, Activity, AlertTriangle, UserCheck, Compass, ClipboardList } from "lucide-react";
 import CTABanner from "@/components/CTABanner";
 import { usePageMeta } from "@/hooks/use-page-meta";
+import { getRouteMeta } from "@/lib/route-meta";
 
 const groups = [
   {
@@ -35,10 +36,11 @@ const groups = [
 ];
 
 export default function CyberConsulting() {
-  usePageMeta(
-    "Cyber Consulting Services | BridgeForward",
-    "Practical cybersecurity consulting — risk assessments, penetration testing, vCISO services, governance & compliance readiness, and tabletop exercises."
-  );
+  // Title/description sourced from src/lib/route-meta.js -- the same map the
+  // post-build static-meta generator (scripts/generate-static-meta.mjs)
+  // reads, so the two can't drift apart.
+  const { title, description } = getRouteMeta("/cyber-consulting");
+  usePageMeta(title, description);
 
   return (
     <>

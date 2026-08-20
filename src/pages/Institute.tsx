@@ -1,6 +1,7 @@
 import { GraduationCap, ShieldCheck, FlaskConical, Rocket, Calendar, Users } from "lucide-react";
 import CTABanner from "@/components/CTABanner";
 import { usePageMeta } from "@/hooks/use-page-meta";
+import { getRouteMeta } from "@/lib/route-meta";
 
 const pillars = [
   { icon: GraduationCap, title: "Cybersecurity Education", body: "Hands-on training programs from foundational to advanced practitioner levels." },
@@ -18,10 +19,11 @@ const phases = [
 ];
 
 export default function Institute() {
-  usePageMeta(
-    "Community Cybersecurity Institute | BridgeForward",
-    "BridgeForward's long-term vision for a physical Community Cybersecurity Institute combining education, business resilience advisory, and workforce acceleration."
-  );
+  // Title/description sourced from src/lib/route-meta.js -- the same map the
+  // post-build static-meta generator (scripts/generate-static-meta.mjs)
+  // reads, so the two can't drift apart.
+  const { title, description } = getRouteMeta("/institute");
+  usePageMeta(title, description);
 
   return (
     <>
