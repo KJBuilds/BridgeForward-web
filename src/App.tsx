@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Layout from "./components/Layout";
+import HashRedirect from "./components/HashRedirect";
 import Index from "./pages/Index";
 
 const CyberConsulting = lazy(() => import("./pages/CyberConsulting"));
@@ -48,6 +49,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <HashRedirect />
         <AppRoutes />
       </BrowserRouter>
     </TooltipProvider>
