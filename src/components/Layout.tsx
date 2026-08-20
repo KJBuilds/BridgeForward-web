@@ -152,8 +152,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <ul className="space-y-3 text-sm">
                 <li><Link to="/cyber-consulting" className="text-silver hover:text-white transition-colors">Cyber Consulting</Link></li>
                 <li><Link to="/workforce-development" className="text-silver hover:text-white transition-colors">Workforce Development</Link></li>
+                <li><Link to="/cyberplug" className="text-silver hover:text-white transition-colors">CyberPlug</Link></li>
                 <li><Link to="/legacy-initiatives" className="text-silver hover:text-white transition-colors">Legacy Initiatives</Link></li>
+                <li><Link to="/institute" className="text-silver hover:text-white transition-colors">Institute</Link></li>
                 <li><Link to="/about" className="text-silver hover:text-white transition-colors">About</Link></li>
+                <li><Link to="/cyber-checklist" className="text-silver hover:text-white transition-colors">Cyber Risk Checklist</Link></li>
                 <li><Link to="/contact" className="text-silver hover:text-white transition-colors">Contact</Link></li>
                 <li><Link to="/investors" className="text-silver hover:text-white transition-colors">Investors</Link></li>
               </ul>
