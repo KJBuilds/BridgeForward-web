@@ -6,34 +6,25 @@ Built with React, TypeScript, Vite, Tailwind CSS, and Framer Motion.
 
 ---
 
-## 🚀 How to Enable GitHub Pages (Guide 1) 
+## 🚀 GitHub Pages Deployment
 
-Since this repository is on a custom GitHub account (`KJBuilds`), the repository owner needs to perform a quick one-time setup on GitHub to enable automated builds and hosting:
+Every push to `main` runs [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml), which builds the
+site and publishes `dist/` to the `gh-pages` branch via
+[`JamesIves/github-pages-deploy-action`](https://github.com/JamesIves/github-pages-deploy-action). The
+workflow declares its own `permissions: contents: write` block, which is sufficient on its own to push to
+`gh-pages` — it does **not** need the repo-wide Settings → Actions → General → "Workflow permissions" toggle
+set to "Read and write" (an explicit per-workflow `permissions:` block overrides that repo-level default,
+it isn't capped by it). Leave that setting at its default; there's no benefit to widening it just for this
+workflow.
 
-### Step 1: Grant Workflow Permissions
-1. Go to the repository page: [github.com/KJBuilds/BridgeForward-web](https://github.com/KJBuilds/BridgeForward-web).
-2. Near the top of the page, click the **Settings** tab (the gear icon).
-3. On the left-hand sidebar, click on **Actions**, then click **General**.
-4. Scroll all the way down to the bottom of the page to find the **Workflow permissions** section.
-5. Select the option: **"Read and write permissions"**.
-6. Click the green **Save** button.
+Pages config (already set, documented here for reference if it's ever reset):
+* **Settings → Pages → Build and deployment → Source:** "Deploy from a branch"
+* **Branch:** `gh-pages`, `/ (root)`
+* **Custom domain:** `bridgeforward.tech` (this is what makes GitHub write a `CNAME` file onto the
+  `gh-pages` branch — the site is served from the domain root, not from a `/BridgeForward-web/` subpath, so
+  `vite.config.ts`'s `base` must stay `"/"`)
 
-### Step 2: Trigger the Build (Or push a change)
-Once Step 1 is saved, the automated deployment workflow will trigger automatically the next time code is pushed. If you want to run it right now:
-1. Click the **Actions** tab at the top of the repository page.
-2. Under "Workflows" on the left, click **Deploy to GitHub Pages**.
-3. If there is a "Run workflow" button, click it, select the `main` branch, and click run. (Alternatively, making any small edit to this README directly on GitHub will trigger it automatically).
-4. Wait about 1-2 minutes for the run to complete with a green checkmark.
-
-### Step 3: Configure Pages Branch
-1. Go back to the **Settings** tab.
-2. On the left sidebar, click **Pages**.
-3. Under the **Build and deployment** section:
-   * **Source**: Ensure it is set to **"Deploy from a branch"**.
-   * **Branch**: Click the dropdown (currently saying `None`), select **`gh-pages`**, keep `/ (root)` selected, and click **Save**.
-4. Wait a few seconds, refresh the page, and the live link will appear at the top!
-
-👉 **Live Site URL:** `https://kjbuilds.github.io/BridgeForward-web/`
+👉 **Live Site URL:** `https://bridgeforward.tech/`
 
 ---
 
