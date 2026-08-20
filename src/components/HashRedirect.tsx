@@ -1,5 +1,5 @@
 // BrainID: Sonnet 5 | Date: 2026-08-20 | Action: New component -- migrates old HashRouter-style links to real paths
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 /**
@@ -21,7 +21,10 @@ import { useNavigate } from "react-router-dom";
 export default function HashRedirect() {
   const navigate = useNavigate();
 
-  useEffect(() => {
+  // useLayoutEffect (not useEffect) so the redirect fires before the browser
+  // paints the homepage -- otherwise a visitor following an old /#/about
+  // link would see a flash of the homepage before landing on /about.
+  useLayoutEffect(() => {
     const { hash } = window.location;
     if (hash.startsWith("#/")) {
       const target = hash.slice(1); // "#/about" -> "/about"
