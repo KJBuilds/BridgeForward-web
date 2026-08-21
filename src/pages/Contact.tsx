@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Mail, Phone, Globe, Send } from "lucide-react";
 import { usePageMeta } from "@/hooks/use-page-meta";
+import { getRouteMeta } from "@/lib/route-meta";
 import WorkInProgressNotice from "@/components/WorkInProgressNotice";
 
 const inquiryTypes = [
@@ -14,10 +15,11 @@ const inquiryTypes = [
 export default function Contact() {
   const [type, setType] = useState(inquiryTypes[0]);
 
-  usePageMeta(
-    "Contact | BridgeForward",
-    "Contact BridgeForward to discuss cybersecurity consulting, workforce development partnerships, scholarship support, or speaking engagements."
-  );
+  // Title/description sourced from src/lib/route-meta.js -- the same map the
+  // post-build static-meta generator (scripts/generate-static-meta.mjs)
+  // reads, so the two can't drift apart.
+  const { title, description } = getRouteMeta("/contact");
+  usePageMeta(title, description);
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();

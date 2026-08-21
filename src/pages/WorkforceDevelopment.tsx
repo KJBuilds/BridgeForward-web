@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import CareerJourneyTimeline from "@/components/CareerJourneyTimeline";
 import CTABanner from "@/components/CTABanner";
 import { usePageMeta } from "@/hooks/use-page-meta";
+import { getRouteMeta } from "@/lib/route-meta";
 
 const programs = [
   {
@@ -30,10 +31,11 @@ const programs = [
 ];
 
 export default function WorkforceDevelopment() {
-  usePageMeta(
-    "Workforce Development | BridgeForward",
-    "BridgeForward Workforce Development connects aspiring professionals to cybersecurity careers through the CyberPlug community, mentorship, training, and internships."
-  );
+  // Title/description sourced from src/lib/route-meta.js -- the same map the
+  // post-build static-meta generator (scripts/generate-static-meta.mjs)
+  // reads, so the two can't drift apart.
+  const { title, description } = getRouteMeta("/workforce-development");
+  usePageMeta(title, description);
 
   return (
     <>

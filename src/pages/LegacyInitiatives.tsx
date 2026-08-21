@@ -3,6 +3,7 @@ import { GraduationCap, Home, Users, Building2, ArrowRight } from "lucide-react"
 import { Link } from "react-router-dom";
 import CTABanner from "@/components/CTABanner";
 import { usePageMeta } from "@/hooks/use-page-meta";
+import { getRouteMeta } from "@/lib/route-meta";
 
 const sections = [
   {
@@ -29,10 +30,11 @@ const sections = [
 ];
 
 export default function LegacyInitiatives() {
-  usePageMeta(
-    "Legacy Initiatives | BridgeForward",
-    "Legacy-centered initiatives — scholarships, the Legacy Home, and community support — funded by BridgeForward's cybersecurity consulting revenue."
-  );
+  // Title/description sourced from src/lib/route-meta.js -- the same map the
+  // post-build static-meta generator (scripts/generate-static-meta.mjs)
+  // reads, so the two can't drift apart.
+  const { title, description } = getRouteMeta("/legacy-initiatives");
+  usePageMeta(title, description);
 
   return (
     <>

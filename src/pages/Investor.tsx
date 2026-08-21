@@ -2,6 +2,7 @@ import EcosystemDiagram from "@/components/EcosystemDiagram";
 import CTABanner from "@/components/CTABanner";
 import { TrendingUp, Building2, Users, Landmark, HandCoins, Briefcase } from "lucide-react";
 import { usePageMeta } from "@/hooks/use-page-meta";
+import { getRouteMeta } from "@/lib/route-meta";
 
 const metrics = [
   { value: "100%", label: "Revenue Reinvested into Workforce & Legacy Programs" },
@@ -22,10 +23,11 @@ const impact = [
 ];
 
 export default function Investor() {
-  usePageMeta(
-    "Investors & Partners | BridgeForward",
-    "Explore corporate, government, and grant partnership opportunities with BridgeForward's cybersecurity-led social enterprise model."
-  );
+  // Title/description sourced from src/lib/route-meta.js -- the same map the
+  // post-build static-meta generator (scripts/generate-static-meta.mjs)
+  // reads, so the two can't drift apart.
+  const { title, description } = getRouteMeta("/investors");
+  usePageMeta(title, description);
 
   return (
     <>

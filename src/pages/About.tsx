@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ShieldCheck, GraduationCap, Users, HeartHandshake, Eye, Heart } from "lucide-react";
 import CTABanner from "@/components/CTABanner";
 import { usePageMeta } from "@/hooks/use-page-meta";
+import { getRouteMeta } from "@/lib/route-meta";
 
 const pillars = [
   {
@@ -43,10 +44,11 @@ const focus = [
 ];
 
 export default function About() {
-  usePageMeta(
-    "About | BridgeForward",
-    "BridgeForward is a cybersecurity-led ecosystem founded by Kisha Jefferson, combining consulting, workforce development, and legacy-driven community initiatives."
-  );
+  // Title/description sourced from src/lib/route-meta.js -- the same map the
+  // post-build static-meta generator (scripts/generate-static-meta.mjs)
+  // reads, so the two can't drift apart.
+  const { title, description } = getRouteMeta("/about");
+  usePageMeta(title, description);
 
   return (
     <>

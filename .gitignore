@@ -34,3 +34,11 @@ PROJECT_STATUS.md
 visit_log.md
 _manifest.md
 .lovable/
+
+# Workspace governance / internal client docs -- never to a public remote
+STATE.json
+JOURNAL.md
+AUDIT_REPORT_*.html
+bridgeforwardworklist.md
+BILLING_LOG.md
+CLIENT_UPDATE_*.md

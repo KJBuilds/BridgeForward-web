@@ -1,6 +1,7 @@
 import { Users, BookOpen, Calendar, HeartHandshake, Briefcase, Library } from "lucide-react";
 import CTABanner from "@/components/CTABanner";
 import { usePageMeta } from "@/hooks/use-page-meta";
+import { getRouteMeta } from "@/lib/route-meta";
 
 const features = [
   { icon: Users, title: "Professional Networking", body: "Connect with practitioners, leaders, and peers across cybersecurity." },
@@ -12,10 +13,11 @@ const features = [
 ];
 
 export default function CyberPlug() {
-  usePageMeta(
-    "CyberPlug Community | BridgeForward",
-    "CyberPlug connects aspiring and emerging cybersecurity professionals to networking, mentorship, job opportunities, and community events."
-  );
+  // Title/description sourced from src/lib/route-meta.js -- the same map the
+  // post-build static-meta generator (scripts/generate-static-meta.mjs)
+  // reads, so the two can't drift apart.
+  const { title, description } = getRouteMeta("/cyberplug");
+  usePageMeta(title, description);
 
   return (
     <>
